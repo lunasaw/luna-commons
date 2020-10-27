@@ -49,7 +49,7 @@
 
         <dependency>
             <groupId>com.luna</groupId>
-            <artifactId>luna-commons-elasticsearch-rest-highclient</artifactId>
+            <artifactId>luna-commons-elasticsearch</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
