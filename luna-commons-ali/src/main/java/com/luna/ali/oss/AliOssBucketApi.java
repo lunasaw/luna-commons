@@ -135,8 +135,6 @@ public class AliOssBucketApi {
         Date creationDate = info.getBucket().getCreationDate();
         // 获取拥有者信息。
         Owner owner = info.getBucket().getOwner();
-        // 获取权限信息。
-        Set<Grant> grants = info.getGrants();
         // 获取容灾类型。
         DataRedundancyType dataRedundancyType = info.getDataRedundancyType();
 

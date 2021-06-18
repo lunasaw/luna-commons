@@ -60,7 +60,7 @@ import java.util.*;
 public class HttpUtils {
 
     /** urlEncode编码 */
-    private static final String        ENCODE            = "utf-8";
+    private static final String        ENCODE = "utf-8";
 
     private static CloseableHttpClient httpClient;
 

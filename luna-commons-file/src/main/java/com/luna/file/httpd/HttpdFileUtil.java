@@ -51,7 +51,7 @@ public class HttpdFileUtil {
      * 有异常时抛出异常
      * </p>
      *
-     * @param url 网络路径
+     * @param url  网络路径
      * @param file 本地路径
      */
     public static void downloadFile(String url, String file) {
@@ -86,7 +86,7 @@ public class HttpdFileUtil {
     /**
      * 上传到文件服务器
      *
-     * @param file 文件字节
+     * @param file     文件字节
      * @param filePath 网络路径
      * @return
      * @throws Exception
@@ -115,7 +115,7 @@ public class HttpdFileUtil {
     public static void main(String[] args) {
         Client client = Client.create();
         client.addFilter(new HTTPBasicAuthFilter("luna", "czy1024"));
-        uploadFile(client, ImageUtils.getBytes("C:\\Users\\improve\\Pictures\\Saved Pictures\\girl.png"),
-            "http://localhost:8087/luna/apache/a.png");
+        uploadFile(client, ImageUtils.getBytes("luna-commons-file/src/main/java/com/luna/file/file/FileEditUtil.java"),
+            "http://f.xicc.cc:22317/httpd/a.java");
     }
 }

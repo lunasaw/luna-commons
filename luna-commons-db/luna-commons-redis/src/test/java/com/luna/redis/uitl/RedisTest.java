@@ -94,9 +94,15 @@ public class RedisTest extends RedisApplicationTest {
         redisBoundUtil.hashPut("luna-person-2", "lunakey", "lunavalue1");
     }
 
+
     @Test
     public void itest() {
         Map<Object, Object> hmget = redisBoundUtil.hmget("luna-person-1");
         System.out.println(JSON.toJSONString(hmget));
+    }
+
+    @Test
+    public void jtest() {
+        redisBoundUtil.set("luna", "luna,redis");
     }
 }

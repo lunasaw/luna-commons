@@ -74,6 +74,12 @@ public class BaiduApiContent {
     /** 人体状态识别 */
     public static String BODIES               = "/rest/2.0/image-classify/v1/body_attr";
 
+    /** Ip 转 物理地址*/
+    public static String IP_TO_ADDRESS        = "/location/ip";
+
+    /** 地址查询天气 */
+    public static String FIND_WEARHER         = "/weather/v1/";
+
     /** TODO Key 30天更换一次 暂定固定值 */
     public static String BAIDU_KEY            =
         "24.f4b0da25ae8e4925fc157a757d3035ff.2592000.1598949848.282335-19618961";

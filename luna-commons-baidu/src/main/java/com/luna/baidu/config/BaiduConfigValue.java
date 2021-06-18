@@ -10,18 +10,32 @@ import com.baidu.aip.speech.AipSpeech;
 @ConfigurationProperties(prefix = "luna.baidu")
 public class BaiduConfigValue {
 
-    private String          appKey;
+    private String appKey;
 
-    private String          secretKey;
+    private String secretKey;
 
-    private String          appId;
+    private String appId;
 
-    private String          baiduKey;
+    private String baiduKey;
 
-    /** 语音识别 */
-    private AipSpeech       aipSpeech;
-    /** 人体识别 */
+    private String mapKey;
+
+    /**
+     * 语音识别
+     */
+    private AipSpeech aipSpeech;
+    /**
+     * 人体识别
+     */
     private AipBodyAnalysis client;
+
+    public String getMapKey() {
+        return mapKey;
+    }
+
+    public void setMapKey(String mapKey) {
+        this.mapKey = mapKey;
+    }
 
     public String getBaiduKey() {
         return baiduKey;

@@ -7,7 +7,7 @@ import java.io.*;
 
 public class FileEditUtil {
 
-    public static Integer writeToFile(String filePath,String content){
+    public static Integer writeToFile(String filePath, String content) {
         File file = new File(filePath);
         FileOutputStream fos = null;
         OutputStream out = null;
@@ -36,7 +36,7 @@ public class FileEditUtil {
         return -1;
     }
 
-    public static String  readFile(String filePath){
+    public static String readFile(String filePath) {
         String content = null;
         File file = new File(filePath);
         try {
@@ -55,11 +55,12 @@ public class FileEditUtil {
 
     /**
      * 用字节文件读取文件
+     *
      * @param filePath
      * @return
      * @throws IOException
      */
-    public static byte[] fileToByteArray(String filePath){
+    public static byte[] fileToByteArray(String filePath) {
         byte[] data = new byte[0];
         try {
             InputStream in = new FileInputStream(filePath);
@@ -72,7 +73,7 @@ public class FileEditUtil {
         return data;
     }
 
-    public static byte[] toByteArray(InputStream in)  {
+    public static byte[] toByteArray(InputStream in) {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024 * 4];
         int n = 0;
@@ -90,7 +91,7 @@ public class FileEditUtil {
     /**
      * 获得指定文件的byte数组
      */
-    private byte[] getBytes(String filePath){
+    private byte[] getBytes(String filePath) {
         byte[] buffer = null;
         try {
             File file = new File(filePath);
@@ -112,7 +113,7 @@ public class FileEditUtil {
         return buffer;
     }
 
-    public static String  readFile(File file){
+    public static String readFile(File file) {
         String content = null;
         try {
             FileInputStream in = new FileInputStream(file);
@@ -129,18 +130,18 @@ public class FileEditUtil {
     }
 
     /**
-     根据byte数组，生成文件
+     * 根据byte数组，生成文件
      */
-    public static void byteToFile(byte[] bfile, String filePath,String fileName) {
+    public static void byteToFile(byte[] bfile, String filePath, String fileName) {
         BufferedOutputStream bos = null;
         FileOutputStream fos = null;
         File file = null;
         try {
             File dir = new File(filePath);
-            if(!dir.exists()&&dir.isDirectory()){//判断文件目录是否存在
+            if (!dir.exists() && dir.isDirectory()) {//判断文件目录是否存在
                 dir.mkdirs();
             }
-            file = new File(filePath+File.separator+fileName);
+            file = new File(filePath + File.separator + fileName);
             fos = new FileOutputStream(file);
             bos = new BufferedOutputStream(fos);
             bos.write(bfile);
